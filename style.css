@@ -1,0 +1,109 @@
+body {
+    overflow: hidden; margin: 0px; padding: 0px;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #f0f0f0;
+    width: calc(100vw - 10px);
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+
+.container::-webkit-scrollbar {
+    width: 5px;
+    background-color: #c3c3c3;
+}      
+
+.container::-webkit-scrollbar-thumb {
+background: #888; 
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+section {
+    width:100%;
+    height: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    background-image: url(img/bg.png);
+    background-size: contain;
+    background-position: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: #ffffffbc;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    width: calc(100vw - 10px);
+    max-width: 500px;
+    border-top: 3px solid #fff;
+}
+
+div.box {
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 0px 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0px;
+}
+
+section form {
+    text-align: left;
+}
+
+input[type=text] {
+    display: block;
+    width: 100%;
+    height: 25px;
+}
+
+section form div {
+    display: flex;
+    align-items:start;
+    margin-bottom: 10px;
+}
+
+section form div span {
+    margin-left: 10px;
+}
+
+section form label:first-child {
+    margin-top: 0px;
+}
+
+section form label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+section form hr {
+    margin: 20px 0px;
+}
+
+section form button {
+    width: 100px; height: 40px;
+    margin: auto;
+    display: block;
+}
