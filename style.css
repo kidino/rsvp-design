@@ -1,11 +1,14 @@
 body {
-    overflow: hidden; margin: 0px; padding: 0px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
 }
 
 body * {
     box-sizing: border-box;
 }
 
+/* setting up the display area */
 .container {
     background-color: #f0f0f0;
     width: calc(100vw - 10px);
@@ -14,25 +17,27 @@ body * {
     overflow-x: hidden;
     max-width: 500px;
     margin: auto;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* styling the scrollbar */
 .container::-webkit-scrollbar {
     width: 5px;
     background-color: #c3c3c3;
-}      
+}
 
 .container::-webkit-scrollbar-thumb {
-background: #888; 
+    background: #888;
 }
 
 /* Handle on hover */
 .container::-webkit-scrollbar-thumb:hover {
-background: #555; 
+    background: #555;
 }
 
+/* every section -- #welcome, #location, #rsvp */
 section {
-    width:100%;
+    width: 100%;
     height: 100%;
     border-bottom: 1px solid #ccc;
     padding: 20px;
@@ -41,33 +46,37 @@ section {
     background-position: center;
 }
 
+/* the bottom sticky navigation */
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
+    /* cosmetics */
     padding: 10px 0px;
     background-color: #ffffffbc;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    height: 50px;
-    width: calc(100vw - 10px);
     max-width: 500px;
     border-top: 3px solid #fff;
+    height: 50px;
+    width: calc(100vw - 10px);
+
+    /* control the content inside -- links */
+    display: flex;
+    justify-content: space-around; /* horizontal positioning */
+    align-items: center; /* vertical positioning */
+
+    /* controlling its position sticky to the bottom */
+    position: fixed;
+    bottom: 0px;
 }
 
+/* semi transparent rounded corner box in section */
 div.box {
     border-radius: 20px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     margin: 0px 20px;
     text-align: center;
     padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 0px;
-}
-
+/* styling the rsvp form */
 section form {
     text-align: left;
 }
@@ -75,12 +84,12 @@ section form {
 input[type=text] {
     display: block;
     width: 100%;
-    height: 25px;
+    height: 30px;
 }
 
 section form div {
     display: flex;
-    align-items:start;
+    align-items: start;
     margin-bottom: 10px;
 }
 
@@ -96,6 +105,7 @@ section form label {
     display: block;
     margin-top: 20px;
     font-weight: bold;
+    margin-bottom: 7px;
 }
 
 section form hr {
@@ -103,35 +113,52 @@ section form hr {
 }
 
 section form button {
-    width: 100px; height: 40px;
+    width: 100px;
+    height: 40px;
     margin: auto;
     display: block;
 }
 
+/* for Google Map, canceling the padding from the section */
 section iframe {
     margin-left: -20px;
 }
 
-
+/* reseting font sizing */
 body * {
-    font-size: 14px;
+    font-size: 12pt;
 }
+
+/* reseting headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0px;
+}
+
 h1 {
-    font-size:1.7em;
+    font-size: 1.7em;
 }
+
 h2 {
-    font-size:1.6em;
+    font-size: 1.6em;
 }
 
 h3 {
-    font-size:1.5em;
+    font-size: 1.5em;
 }
+
 h4 {
-    font-size:1.4em;
+    font-size: 1.4em;
 }
+
 h5 {
-    font-size:1.2em;
+    font-size: 1.2em;
 }
+
 h6 {
-    font-size:1.1em;
+    font-size: 1.1em;
 }
